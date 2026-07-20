@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA6DHJ</title>
+    <link rel="icon" type="image/png" href="Indicativo.ico">
+    <style>
+        /* Estilos Generales */
+        body { 
+            font-family: sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f4f4; 
+            color: #333; 
+        }
+
+        .baliza { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 10px; 
+            font-weight: bold; 
+            color: #d00000;
+            font-size: 18px; 
+            text-align: center; 
+        }
+        
+        .baliza::before { 
+            content: ""; 
+            width: 15px; 
+            height: 15px; 
+            background: red; 
+            border-radius: 50%; 
+            box-shadow: 0 0 10px red;
+            animation: parpadeo 1s infinite; 
+        }
+
+        @keyframes 
+        parpadeo { 
+            0% { 
+        opacity: 1; } 
+        50% { 
+        opacity: 0.3; } 
+        100% { 
+        opacity: 1; 
+    } 
+}
+      
+        /* Header */
+        header { 
+            background: #2a5298; 
+            color: white; 
+            padding: 20px; 
+            text-align: center; 
+        }
+
+        .header-flex { 
+            background: #2a5298; 
+            color: white; 
+            padding: 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 20px; 
+        }
+  
+        .logo-giratorio { 
+            width: 250px;
+            animation: giroHorizontal 4s linear infinite; 
+            transform-style: preserve-3d; 
+        }
+
+        @keyframes giroHorizontal {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+        
+        .logo-lateral { 
+            position: fixed; 
+            left: 10px; 
+            top: 120px; 
+            width: 150px; 
+            z-index: 99; 
+        }
+
+        /* Navegación */
+        nav { 
+            background: #1e3c72; 
+            padding: 10px; 
+            text-align: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+        }
+
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 10px 20px; 
+            display: inline-block; 
+            font-weight: bold; 
+        }
+
+        nav a:hover { 
+            background: rgba(255,255,255,0.2); 
+            border-radius: 5px; 
+        }
+
+        nav a.activo { 
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px; 
+            color: #ffff00; 
+        }
+
+        /* Contenedor Principal */
+        .container { 
+            max-width: 1000px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background: white; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+        }
+        
+        .contenedor { 
+            display: flex; 
+            align-items: center; 
+        }
+
+        .texto { 
+            flex: 1; 
+            padding-right: 20px; 
+        }
+
+        .imagen { 
+            width: 250px; 
+        }
+
+        /* Secciones */
+        section { 
+            margin-bottom: 40px; 
+            padding-bottom: 20px; 
+            border-bottom: 1px solid #eee; 
+        }
+
+        h2 { 
+            color: #2a5298; 
+        }
+        
+        /* Grid de Tarjetas */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+
+        .card { 
+            background: #f9f9f9; 
+            padding: 20px; 
+            border-radius: 8px; 
+            border-left: 5px solid #2a5298; 
+        }
+
+        
+        /* Footer */
+        footer { 
+            background: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 20px; 
+        }
+        </style>
+    </head>
+
+    <body>
+        <header class="header-flex">
+        <img src="Indicativo.png" alt="Indicativo" class="logo-fija">
+    </header>
+    <div class="baliza">
+    CA6DHJ - Operativo H/24
+</div>
+
+    <!-- MENÚ DE NAVEGACIÓN CON ENLACES EXTERNOS -->
+    <nav>
+        <a href="ca6dhj.html">Inicio</a>
+        <a href="https://www.bcn.cl/leychile/navegar?org=&idNorma=8156" target="_blank">Ley</a>
+        <a href="https://www.federachi.cl" target="_blank">FEDERACHI</a>
+        <a href="https://www.ce3aa.cl/" target="_blank">RC Chile</a>
+        <a href="https://www.rcdr.cl/" target="_blank">RCDR</a>
+        <a href="https://www.ce3ser.cl/" target="_blank">SER</a>
+        <a href="Historia.html">Historia</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="tecno.html">Tecno</a>
+        <a href="taller.html" class="activo">Taller</a>
+    </nav>
+
+    <div class="container">
+        <section id="info">
+            <h2>Alfabeto Radiofónico</h2>
+            <h3>A - Alfa</h3>
+            <h3>B - Bravo</h3>
+            <h3>C - Charlie</h3>
+            <h3>D - Delta</h3>
+            <h3>E - Echo</h3>
+            <h3>F - Foxtrot</h3>
+            <h3>G - Golf</h3>
+            <h3>H - Hotel</h3>
+            <h3>I - India</h3>
+            <h3>J - Juliet</h3>
+            <h3>K - Kilo</h3>
+            <h3>L - Lima</h3>
+            <h3>M - Mike</h3>
+            <h3>N - November</h3>
+            <h3>O - Oscar</h3>
+            <h3>P - Papa</h3>
+            <h3>Q - Quebec</h3>
+            <h3>R - Romeo</h3>
+            <h3>S - Sierra</h3>
+            <h3>T - Tango</h3>
+            <h3>U - Uniform</h3>
+            <h3>V - Victor</h3>
+            <h3>W - Whiskey</h3>
+            <h3>X - X-Ray</h3>
+            <h3>Y - Yankee</h3>
+            <h3>Z - Zulu</h3>
+
+            <h3>1 - Primero</h3>
+            <h3>2 - Segundo</h3>
+            <h3>3 - Tercero</h3>
+            <h3>4 - Cuarto</h3>
+            <h3>5 - Quinto</h3>
+            <h3>6 - Sexto</h3>
+            <h3>7 - Septimo</h3>
+            <h3>8 - Octavo</h3>
+            <h3>9 - Noveno</h3>
+            <h3>0 - Nada</h3>
+        </section>
+
+    <section id="info">
+        <h2>Código Q</h2>
+        <h3>QRA - Indicativo</h3>
+        <h3>QRB - A que distancia estamos?</h3>
+        <h3>QAP - Estar o Quedar Atento</h3>
+        <h3>QRG - Mi frecuencia es...</h3>
+        <h3>QRH - Varía mi frecuencia?</h3>
+        <h3>QRI - Cómo es el tono de mi transmisión?</h3>
+        <h3>QRK - Frecuencia</h3>
+        <h3>QRL - Frecuencia Ocupada</h3>
+        <h3>QRM - Interferencia Artificial</h3>
+        <h3>QRN - Interferencia Atmosferica</h3>
+        <h3>QRO - Aumento de Potencia</h3>
+        <h3>QRP - Disminución de Potencia</h3>
+        <h3>QRQ - Aumento de velocidad de transmisión</h3>
+        <h3>QRS - Envío código morse más despacio</h3>
+        <h3>QRT - Fin de Transmisión</h3>
+        <h3>QRU - Estado</h3>
+        <h3>QRV - Estar a la escucha o listo para recibir</h3>
+        <h3>QRX - Mantener un momento</h3>
+        <h3>QRY - Turno</h3>
+        <h3>QRZ - Quien me llama?</h3>
+        <h3>QSA - Intensidad de Señal</h3>
+        <h3>QSB - La señal se desvanece</h3>
+        <h3>QSK - Puedo oir entre mi transmisión (break-in)</h3>
+        <h3>QSL - Acusar recibo</h3>
+        <h3>QSO - Establecer contacto con...</h3>
+        <h3>QSP - puede transmitir el mensaje a..?</h3>
+        <h3>QSY - Cambio de frecuencia</h3>
+        <h3>QTA - Cancelación de mensaje</h3>
+        <h3>QTC - Asunto / mensaje</h3>
+        <h3>QTH - Ubicación geografica</h3>
+        <h3>QTR - Hora exacta</h3>
+    </section>
+    <section id="info">
+        <h2>Código 10 Completo (estándar APCO / Banda Ciudadana)</h2>
+        <h3>10-00: Precaución extrema.</h3>
+        <h3>10-1 : Recepción deficiente / Señal muy débil.</h3>
+        <h3>10-2 : Recepción óptima / Señal excelente.</h3>
+        <h3>10-3 : Detener la transmisión de inmediato / dejar nulo.</h3>
+        <h3>10-4 : Mensaje recibido, comprendido y conforme</h3>
+        <h3>10-5 : Retransmitir o pasar este mensaje a otra estación</h3>
+        <h3>10-6 : Operador ocupado, por favor espere en la línea.</h3>
+        <h3>10-7 : Estación fuera de servicio / Apagando el equipo.</h3>
+        <h3>10-8 : Estación operativa, activa y disponible para llamadas.</h3>
+        <h3>10-9 : Repita la última transmisión.</h3>
+        <h3>10-10: Transmisión finalizada / En espera en la frecuencia.</h3>
+        <h3>10-11: Transmisión demasiado veloz, hable más lento.</h3>
+        <h3>10-12: Presencia de visitantes o personas ajenas en la estación.</h3>
+        <h3>10-13: Solicito reporte del clima o estado de las rutas.</h3>
+        <h3>10-14: Mensaje o Información</h3>
+        <h3>10-15: Mensaje Completo</h3>
+        <h3>10-16: Recoger o retirar carga/persona en una ubicación.</h3>
+        <h3>10-17: Asunto de carácter urgente.</h3>
+        <h3>10-18: ¿Tiene algún mensaje o asignación pendiente para mí?.</h3>
+        <h3>10-19: Ningún mensaje pendiente, regrese a la base de operaciones.</h3>
+        <h3>10-20: Ubicación geográfica exacta o coordenadas.</h3>
+        <h3>10-21: Comuníquese a través de línea telefónica convencional.</h3>
+        <h3>10-22: Reportarse físicamente en persona en un punto.</h3>
+        <h3>10-23: Permanecer en modo de espera / Atento a instrucciones.</h3>
+        <h3>10-24: Misión cumplida / Completado el último mensaje.</h3>
+        <h3>10-25: Póngase en contacto / Hacer contacto.</h3>
+        <h3>10-26: Hora estimada.</h3>
+        <h3>10-27: Me cambio de canal.</h3>
+        <h3>10-28: Identifique su estación.</h3>
+        <h3>10-29: Hora de ponerse en contacto / iniciar una transmisión.</h3>
+        <h3>10-30: No cumple las reglas o uso no autorizado.</h3>
+        <h3>10-31: Pareja (conyuge).</h3>
+        <h3>10-32: Reporte de señal.</h3>
+        <h3>10-33: Tráfico de emergencia absoluta / Canal prioritario.</h3>
+        <h3>10-34: Se requiere ayuda o asistencia.</h3>
+        <h3>10-35: Información confidencial.</h3>
+        <h3>10-36: Hora exacta del sistema.</h3>
+        <h3>10-37: Se necesita grúa en...</h3>
+        <h3>10-38: Se necesita ambulancia.</h3>
+        <h3>10-39: Mensaje entregado.</h3>
+        <h3>10-40: Despejar canal.</h3>
+        <h3>10-41: Inicio de turno de operaciones.</h3>
+        <h3>10-42: Fin de turno de operaciones.</h3>
+        <h3>10-43: Congestión de tránsito / tráfico cortado.</h3>
+        <h3>10-44: Tengo un mensaje para usted.</h3>
+        <h3>10-45: Todos los que me escuchen, por favor reportense.</h3>
+        <h3>10-46: Asistir a un automovilista varado.</h3>
+        <h3>10-47: Se necesita asistencia en una carretera específica.</h3>
+        <h3>10-48: Mensaje recibido o confirmado.</h3>
+        <h3>10-49: Proceder a un destino específico.</h3>
+        <h3>10-50: Brecha o descanso en el canal (ceder el paso).
+        <h3>10-51: ¿Quién está llamando?</h3>
+        <h3>10-52: El tiempo estimado de llegada es...</h3>
+        <h3>10-53: Carretera cerrada o bloqueada.</h3>
+        <h3>10-54: Animal muerto en la carretera.</h3>
+        <h3>10-55: Conductor intoxicado o manejando en mal estado.</h3>
+        <h3>10-56: Peatón intoxicado.</h3>
+        <h3>10-57: El operador abandonó la estación.</h3>
+        <h3>10-58: Dirigir el tráfico.</h3>
+        <h3>10-59: Mensaje de escolta o convoy.</h3>
+        <h3>10-60: ¿Cuál es el número del siguiente mensaje?</h3>
+        <h3>10-61: Personal en el área de emergencia.</h3>
+        <h3>10-62: Es imposible copiar (escuchar), use el teléfono.</h3>
+        <h3>10-63: Red de radio dirigida a...</h3>
+        <h3>10-64: La línea de radio está libre.</h3>
+        <h3>10-65: Esperando su próximo mensaje o asignación.</h3>
+        <h3>10-66: Cancelar mensaje anterior.</h3>
+        <h3>10-67: Todas las unidades acaten las órdenes.</h3>
+        <h3>10-68: Repita el mensaje por favor.</h3>
+        <h3>10-69: Mensaje recibido, esperando instrucciones.</h3>
+        <h3>10-70: Alerta de incendio en curso.</h3>
+        <h3>10-71: Proceder con la transmisión secuencial.</h3>
+        <h3>10-72: Pruebe los tonos o la señal de audio.</h3>
+        <h3>10-73: Control de velocidad (radar) en la ruta.</h3>
+        <h3>10-74: Negativo / No estoy de acuerdo.</h3>
+        <h3>10-75: Estás causando interferencia.</h3>
+        <h3>10-76: Voy en camino hacia su ubicación / destino.</h3>
+        <h3>10-77: Tiempo estimado de contacto.</h3>
+        <h3>10-78: Enviar asistencia médica urgente.</h3>
+        <h3>10-79: Alerta de bomba o amenaza grave.</h3>
+        <h3>10-80: Reunión en persona en un punto acordado.</h3>
+        <h3>10-81: Reservar habitación de hotel para un operador.</h3>
+        <h3>10-82: Reservar espacio de estacionamiento o parada.</h3>
+        <h3>10-83: Espere en el canal actual.</h3>
+        <h3>10-84: Mi número de teléfono es...</h3>
+        <h3>10-85: Mi dirección de casa / base es...</h3>
+        <h3>10-86: Operador oficial en servicio.</h3>
+        <h3>10-87: Solicito la ubicación exacta de la unidad.</h3>
+        <h3>10-88: Solicito el número de teléfono del operador.</h3>
+        <h3>10-89: Se necesita un reparador de radio en camino.</h3>
+        <h3>10-90: Tengo interferencia de televisión (ITV) local.</h3>
+        <h3>10-91: Hable más cerca del micrófono.</h3>
+        <h3>10-92: Su transmisor está desajustado.</h3>
+        <h3>10-93: Verifique mi frecuencia en este canal.</h3>
+        <h3>10-94: Por favor, déme un conteo largo para probar audio (1 al 10).</h3>
+        <h3>10-95: Transmitir portadora muerta (señal sin voz) por 5 segundos.</h3>
+        <h3>10-96: Loco, demente o conductor errático en la vía.</h3>
+        <h3>10-97: Ya llegué al destino / Estoy en la escena.</h3>
+        <h3>10-98: Misión cumplida / Operación terminada con éxito.</h3>
+        <h3>10-99: Misión cumplida o situación bajo control absoluto.</h3>
+        <h3>10-100: Necesito ir al baño / Parada técnica para ir al baño.</h3>
+    </section>
+    <section id="info">
+        <h2>Códigos de Cortesía</h2>
+        <h3>21: Contacto establecido o Sintonía.</h3>
+        <h3>55: Mucho éxito o Buena suerte.</h3>
+        <h3>73: Saludos cordiales</h3>
+        <h3>75: Por favor, no cambie de frecuencia.</h3>
+        <h3>88: Besos y Abrazos.</h3>
+        <h3>99: Desaparezca de la frecuencia o Vete de aquí.</h3>
+    </section>
+    <section id="info">
+        <h2>Jerga de los 11 Metros</h2>
+        <h3>👤 Personas y Familia</h3>
+        <h3>Bujías / Bujítas: Los hijos varones.</h3>
+        <h3>Cristales / Antenitas: Las hijas mujeres.</h3>
+        <h3>La Primerisima / Alto Mando: La esposa o pareja.</h3>
+        <h3>El Primerisimo / Alto Mando: El esposo o pareja.</h3>
+        <h3>El Primero Primerisimo / El Respetable: El padre.</h3>
+        <h3>La Primera Primerisima / La Respetable: La madre.</h3>
+        <h3>Tía Juana / Tía María: Marihuana o drogas en la carretera.</h3>
+        <h3>Pitufo / Azules / La Tira / Tamarindos: La policía (el término varía según el país y el uniforme).</h3>
+        <h3>Cachorros: Operadores novatos o conductores nuevos en la ruta.</h3>
+        <h3>Pájaro carpintero: Un operador molesto que no deja de interrumpir o modular.</h3>
+        <h3>🚗 Vehículos y Carretera</h3>
+        <h3>Móvil: Cualquier vehículo con radio instalada.</h3>
+        <h3>Caballo de fierro / Bestia: Camión de carga pesada.</h3>
+        <h3>Don Juan: Bus de Pasajeros.</h3>
+        <h3>Laminita / Cortina: Vehículo pequeño o automóvil particular.</h3>
+        <h3>Caja de muerto / Ataúd: Camión contenedor o furgón cerrado.</h3>
+        <h3>Lentejuelas: Pavimento mojado, escarcha o hielo peligroso en la ruta.</h3>
+        <h3>Fotografía: Radar de velocidad de la policía.</h3>
+        <h3>Sacar la foto: Cuando la policía te multa con un radar.</h3>
+        <h3>Línea de baja / El cable: El teléfono (celular o fijo). "Bájate a la línea de baja" significa "llámame por teléfono".</h3>
+        <h3>Hacer la cruz: Terminar el viaje de regreso y llegar a salvo a casa.</h3>
+        <h3>Dar un jaloncito o Empujón: Acelerar o avanzar rápido en un tramo libre.</h3>
+        <h3>El pozo / La cocina: Estación de servicio, gasolinera o restaurante de carretera.</h3>
+        <h3>📻 El Equipo de Radio y Señal</h3>
+        <h3>El Ladrillo / El Fierro / El Computador: El radiotransmisor de CB.</h3>
+        <h3>Base: Estación de radio fija instalada en una casa.</h3>
+        <h3>Bigote / Varilla: La antena del vehículo o camión.</h3>
+        <h3>Vitaminas / Chanclas / Zapatos / Pastillas: Amplificador lineal de potencia para aumentar el alcance.</h3>
+        <h3>Micro o Pera: El micrófono de la radio.</h3>
+        <h3>Pisar el fierro / Tirar portadora: Presionar el botón PTT del micrófono sin hablar (bloqueando el canal).</h3>
+        <h3>Estar con estática en el cerebro: Operador cansado que ya no coordina bien lo que dice por radio.</h3>
+        <h3>Tener oreja / Estar a la escucha: Estar sintonizando el canal atento a lo que dicen, pero sin transmitir.</h3>
+        <h3>Modular: Hablar por la radio.</h3>
+        <h3>Echar un grito: Llamar a alguien por su apodo en la frecuencia.</h3>
+        <h3>🏠 Destinos y Lugares</h3>
+        <h3>La Comandancia / El Cuartel: La casa del operador.</h3>
+        <h3>El Nido: El dormitorio o lugar de descanso.</h3>
+        <h3>Dos Metros Lineales: La cama.</h3>
+        <h3>Apagar Filamentos: Ir a dormir o descansar.</h3>
+        <h3>Punto de reunión: Coordenada o lugar exacto en la ruta para detenerse a conversar en persona.</h3>
+        <h3>La capital: La ciudad principal hacia donde se dirige el convoy.</h3>
+        <h3>🗣️ Expresiones Populares en Frecuencia</h3>
+        <h3>Breco / Break: Palabra que se dice para pedir permiso e ingresar a una conversación en curso en un canal.</h3>
+        <h3>Quedar en el aire: Mantener la radio encendida esperando que otra estación llame.</h3>
+        <h3>Copiar: Entender el mensaje. "¿Me copias?" significa "¿me entiendes/escuchas bien?".</h3>
+        <h3>Bastón / Batuta: El control de la conversación. "Te paso la batuta" significa "te cedo la palabra".</h3>
+    </section>
+    <section id="info">
+        <h2>Handles o Apodos tradicionales</h2>
+        <p>
+        Los <strong>handles</strong> o apodos tradicionales en la Banda Ciudadana (CB) nacieron en los años 70 en Estados Unidos y 
+        se extendieron rápidamente por todo el mundo hispanohablante.</p>
+        <p>
+        Su función principal era la privacidad: nadie usaba su nombre real para evitar ser rastreado por las autoridades (ya que en 
+        esa época las licencias eran costosas o difíciles de tramitar) o por delincuentes en la ruta.</p>
+        <p>
+        Los apodos tradicionales se eligen según la personalidad, el tipo de carga, el vehículo o la región del operador.
+        </p>
+        <p>
+        A continuación dejamos una lista de los más comunes y emblemáticos:
+        </p>
+        <h3>🚛 Basados en la Ruta y el Oficio (Camioneros)</h3>
+        <h3>Tragacaminos / Correcaminos: Operadores que viajan largas distancias sin detenerse casi a descansar.</h3>
+        <h3>Frenos de Seda: Conductores muy precavidos o lentos al manejar camiones pesados.</h3>
+        <h3>El Centinela: El operador que siempre viaja al final de un convoy cuidando la espalda de los demás.</h3>
+        <h3>El Halcón: Quien viaja al frente del convoy avisando sobre baches, accidentes o policías.</h3>
+        <h3>Asfalto: Un clásico para los veteranos que llevan décadas viviendo en la carretera.</h3>
+        <h3>🎨 Basados en la Personalidad y Actitud</h3>
+        <h3>El Charlatán / Cotorra: Operadores que no sueltan el micrófono y saturan el canal conversando.</h3>
+        <h3>El Fantasma: Alguien que modula muy poco, aparece de la nada en la frecuencia y vuelve a desaparecer.</h3>
+        <h3>Cascarrabias: El típico operador veterano que se molesta cuando los novatos usan mal la radio.</h3>
+        <h3>El Profe / Maestro: Quien siempre está dispuesto a explicar técnicas de radio, antenas o rutas a los demás.</h3>
+        <h3>Gato Negro: Un apodo tradicionalmente asociado a la mala suerte o a quien siempre le ocurren imprevistos en los viajes.</h3>
+        <h3>📦 Basados en la Carga o el Vehículo</h3>
+        <h3>Cisterna / Petrolero: Conductores que transportan combustibles o líquidos peligrosos.</h3>
+        <h3>Carbonero: Quien maneja camiones de carga sucia o materiales de construcción.</h3>
+        <h3>Trueno: Camiones con motores modificados, muy ruidosos o con escapes libres.</h3>
+        <h3>El Brillante: Camiones americanos llenos de luces cromadas y accesorios llamativos.</h3>
+        <h3>🦸‍♂️ De la Cultura Popular y Naturaleza</h3>
+        <h3>Lobo Solitario: Quien prefiere viajar de noche y nunca viaja en convoyes.</h3>
+        <h3>Sombra: Un operador que viaja pegado a otro camión durante toda la ruta para acompañarse.</h3>
+        <h3>Cazador: Quien siempre está buscando contactos a larga distancia (llamados comunicados "DX").</h3>
+    </section>
+    </div>
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>&copy; Desarrollado por <strong>Código 404 Ciberseguridad</strong> - 2026</p>
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia</title>
+    <link rel="icon" type="image/png" href="Indicativo.ico">
+    <style>
+        /* Estilos Generales */
+        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+
+        .baliza {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #d00000;
+    font-size: 18px;
+    text-align: center;
+}
+
+.baliza::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0 0 10px red;
+    animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+      
+        /* Header */
+        header { background: #2a5298; color: white; padding: 20px; text-align: center; }
+        .header-flex { background: #2a5298; color: white; padding: 20px; display: flex; align-items: center; justify-content: center; gap: 20px; }
+        .logo { width: 150px; height: auto; }
+        .logo-lateral { position: fixed; left: 10px; top: 120px; width: 150px; z-index: 99; }
+
+        /* Navegación */
+        nav { background: #1e3c72; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 100; }
+        nav a { color: white; text-decoration: none; padding: 10px 20px; display: inline-block; font-weight: bold; }
+        nav a:hover { background: rgba(255,255,255,0.2); border-radius: 5px; }
+        nav a.activo { background: rgba(255,255,255,0.3); border-radius: 5px; color: #ffff00; }
+
+        /* Contenedor Principal */
+        .container { max-width: 1000px; margin: 20px auto; padding: 20px; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        
+        .contenedor {
+            display: flex;
+            align-items: center;
+        }
+        .texto {
+            flex: 1;
+            padding-right: 20px;
+        }
+        
+        .imagen {
+            width: 250px;
+        }
+
+        .image-card {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 5px;
+        }
+
+        /* Secciones */
+        section { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        h2 { color: #2a5298; }
+        
+        /* Grid de Tarjetas */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 5px solid #2a5298; }
+        
+        /* Footer */
+        footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <header class="header-flex">
+        <img src="Indicativo.png" alt="Indicativo" class="logo-fija">
+    </header>
+    <div class="baliza">
+    CA6DHJ - Operativo H/24
+</div>
+
+    <!-- MENÚ DE NAVEGACIÓN CON ENLACES EXTERNOS -->
+    <nav>
+        <a href="ca6dhj.html">Inicio</a>
+        <a href="https://www.bcn.cl/leychile/navegar?org=&idNorma=8156" target="_blank">Ley</a>
+        <a href="https://www.federachi.cl" target="_blank">FEDERACHI</a>
+        <a href="https://www.ce3aa.cl/" target="_blank">RC Chile</a>
+        <a href="https://www.rcdr.cl/" target="_blank">RCDR</a>
+        <a href="https://www.ce3ser.cl/" target="_blank">SER</a>
+        <a href="Historia.html" class="activo">Historia</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="tecno.html">Tecno</a>
+        <a href="taller.html">Taller</a>
+    </nav>
+    
+    <div class="container">
+
+        <section id="info">
+            <h2>Historia de los Radioaficionados</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Que hace un Radioaficionado, para que sirve serlo?</h3>
+                    <p>LES VOY A CONTAR QUE ES LO QUE HACE UN RADIOAFICIONADO NORMALMENTE, QUE ES LO QUE PUEDE HACER Y QUE BENEFICIO TIENE SER UN RADIOAFICIONADO MAS DE ESTE MUNDO, POR QUE SI NO LO SABEN LOS RADIOAFICIONADOS SOMOS UNA COMUNIDAD DE UNOS CUANTOS MILLONES EN TODO EL MUNDO.
+                       MITO URBANO MUY COMUN: QUIEN NO ESCUCHO EN SU BARRIO DECIR A ALGUN VECINO, AHI EN ESA CASA VIVE EL LOCO RADIOAFICIONADO QUE SE QUEDA HASTA LAS 5 DE LA MAÑANA HABLANDO Y QUE METE INTERFERENCIAS EN LA TELEVISION Y EN LA RADIO DE TODO EL BARRIO, SE NOTA QUE NO TIENE 
+                       NADA QUE HACER EN LA VIDA QUE ESTA TODO EL DIA CON LA RADIO HABLANDO CON LOS AMIGOS Y TIENE EL TECHO LLENO DE ANTENAS QUE EN UNA TORMENTA DE ESTAS VA A CAER UN RAYO Y NOS VA A QUEMAR TODOS LOS ELECTRODOMESTICOS AL BARRIO.</p>
+                    <img src="Antena 1.jpg" alt="Antena" class="image-card">
+                    <img src="Antena 2.jpg" alt="Antena" class="image-card">
+                    <p>Estos son algunos ejemplos de nuestras antenas, que de mas esta decirlo no generan ningún mal al cuerpo humano, caso contrario a las antenas de las compañías de telefonía celular que si puede generar mal a la salud humana por que tienen mas potencia y están en otras 
+                       frecuencias, RECUERDEN LAS ANTENAS DE UN RADIOAFICIONADO NO HACEN MAL A LA SALUD HUMANA POR QUE NO ESTÁN EN FRECUENCIAS ELEVADAS COMO LAS DE TELEFONÍA CELULAR.</p>
+                    <p>Ahora bien retomando el tema principal, ustedes saben lo que puede hacer un radioaficionado?, saben en que los puede ayudar en caso de que ocurra una catastrofe como alguna de estas.</p>
+                    <img src="Derrumbe 1.jpg" alt="Derrumbe" class="image-card">
+                    <img src="Derrumbe 2.jpg" alt="Derrumbe" class="image-card">
+                    <p>Cabe recordar que cuando sucede una catástrofe como la que acabamos de ver en esas imágenes, las antenas de las compañías de celulares se caen y dejan de funcionar, la energía eléctrica se corta por días incluso meses, el agua potable y el gas deja de llegarnos a nuestras 
+                       casas y muchas cosas mas pasan y la desesperación y el caos reina en todo momento.
+                       Entonces cuando en ese momento que necesitamos comunicarnos con familiares, cuando necesitamos ayuda medica, cuando necesitamos agua, cuando necesitamos un medicamento, cuando necesitamos la ayuda de alguien que no nos puede ver ni nos puede escuchar por que nada funciona.</p>
+                    <img src="Operador 1.jpg" alt="Operador" class="image-card">
+                    <img src="Operador 2.jpg" alt="Operador" class="image-card">
+                    <img src="Operador 3.jpg" alt="Operador" class="image-card">
+                    <img src="Operador 4.jpg" alt="Operador" class="image-card">
+                    <p>Aquí aparece nuestro vecino loco, que se queda hasta las 5 de la mañana hablando con los amigos, que tiene el techo lleno de antenas , que no hace nada de la vida, según los demás que no saben ni entienden nada de la Radioaficion.
+                       Aquí esta se los presento, un verdadero Radioaficionado no se queda hasta las 5 de la mañana hablando con los amigos, se queda hasta las 5 de la mañana experimentando equipos y antenas y hablando con sus colegas de todo el mundo para aprender y capacitarse mas y mas.
+                       Un Radioaficionado no llena su techo de antenas para molestar a los demás vecinos, lo hace para experimentar nuevas y mejores formas de comunicación, no interfiere la tv por que le gusta hacerlo, lo hace experimentando y aprendiendo a mejorar su estación para en el 
+                       futuro no hacerlo, no espera reconocimientos por lo que hace lo hace de forma anónima y desinteresada y se compra o construye sus equipos con sus propios medios, y el día que necesitemos de el no nos va a pedir nada a cambio por ayudarnos.
+                       El verdadero Radioaficionado cuando todas las antenas y los sistemas de comunicación que conocemos hoy en día (celulares, handys, Internet, telefonía etc. etc. etc.) se caen y dejan de funcionar, los sistemas del Radioaficionado van a funcionar a la perfección por que con solo 
+                       una batería y unos metros de cable o de alambre común y corriente se va a poder comunicar con todo el mundo y pedir la ayuda que podemos necesitar en momentos de emergencia o catástrofe, así quedo demostrado en el ultimo terremoto de Chile, los Radioaficionados de todo el mundo 
+                       en colaboración con los Radioaficionados Chilenos salvaron muchísimas vidas humanas a cambio de ni siquiera un reconocimiento.
+                       Espero que la gente que no sabia o que tenia una mala imagen de un Radioaficionado halla aprendido lo que es capaz de hacer un Radioaficionado en situaciones limites, por eso invito a cualquier persona que le interese sumarse a esta increíble y apasionante actividad lo haga, que 
+                       no espere mas, la radioaficion no es una comunidad cerrada o una élite como muchos creen, es una comunidad que recibe a todos aquellos que quieran aprender y experimentar las comunicaciones con los brazos abiertos.</p>
+                </div>
+        </section>
+    </div>
+
+    </div>
+
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>&copy; Desarrollado por <strong>Código 404 Ciberseguridad</strong> - 2026</p>
+    </footer>
+
+</body>
+</html>

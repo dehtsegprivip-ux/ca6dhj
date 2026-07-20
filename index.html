@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA6DHJ</title>
+    <link rel="icon" type="image/png" href="Indicativo.ico">
+    <style>
+        /* Estilos Generales */
+        body { 
+            font-family: sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f4f4; 
+            color: #333; 
+        }
+
+        .baliza { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 10px; 
+            font-weight: bold; 
+            color: #d00000;
+            font-size: 18px; 
+            text-align: center; 
+        }
+        
+        .baliza::before { 
+            content: ""; 
+            width: 15px; 
+            height: 15px; 
+            background: red; 
+            border-radius: 50%; 
+            box-shadow: 0 0 10px red;
+            animation: parpadeo 1s infinite; 
+        }
+
+        @keyframes 
+        parpadeo { 
+            0% { 
+        opacity: 1; } 
+        50% { 
+        opacity: 0.3; } 
+        100% { 
+        opacity: 1; 
+    } 
+}
+      
+        /* Header */
+        header { 
+            background: #2a5298; 
+            color: white; 
+            padding: 20px; 
+            text-align: center; 
+        }
+
+        .header-flex { 
+            background: #2a5298; 
+            color: white; 
+            padding: 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 20px; 
+        }
+  
+        .logo-giratorio { 
+            width: 250px;
+            animation: giroHorizontal 4s linear infinite; 
+            transform-style: preserve-3d; 
+        }
+
+        @keyframes giroHorizontal {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+        
+        .logo-lateral { 
+            position: fixed; 
+            left: 10px; 
+            top: 120px; 
+            width: 150px; 
+            z-index: 99; 
+        }
+
+        /* Navegación */
+        nav { 
+            background: #1e3c72; 
+            padding: 10px; 
+            text-align: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+        }
+
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 10px 20px; 
+            display: inline-block; 
+            font-weight: bold; 
+        }
+
+        nav a:hover { 
+            background: rgba(255,255,255,0.2); 
+            border-radius: 5px; 
+        }
+
+        nav a.activo { 
+            background: rgba(255, 255, 255, 0.3); 
+            border-radius: 5px; 
+            color: #ffff00; 
+        }
+
+        /* Contenedor Principal */
+        .container { 
+            max-width: 1000px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background: white; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+        }
+        
+        .contenedor { 
+            display: flex; 
+            align-items: center; 
+        }
+
+        .texto { 
+            flex: 1; 
+            padding-right: 20px; 
+        }
+
+        .imagen { 
+            width: 250px; 
+        }
+
+        /* Secciones */
+        section { 
+            margin-bottom: 40px; 
+            padding-bottom: 20px; 
+            border-bottom: 1px solid #eee; 
+        }
+
+        h2 { 
+            color: #2a5298; 
+        }
+        
+        /* Grid de Tarjetas */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+
+        .card { 
+            background: #f9f9f9; 
+            padding: 20px; 
+            border-radius: 8px; 
+            border-left: 5px solid #2a5298; 
+        }
+
+        
+        /* Footer */
+        footer { 
+            background: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 20px; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header-flex">
+        <img src="Indicativo.png" alt="Indicativo" class="logo-giratorio">
+    </header>
+    <div class="baliza">
+    CA6DHJ - Operativo H/24
+</div>
+
+    <!-- MENÚ DE NAVEGACIÓN CON ENLACES EXTERNOS -->
+    <nav>
+        <a href="#inicio" class="activo">Inicio</a>
+        <a href="https://www.bcn.cl/leychile/navegar?org=&idNorma=8156" target="_blank">Ley</a>
+        <a href="https://www.federachi.cl" target="_blank">FEDERACHI</a>
+        <a href="https://www.ce3aa.cl/" target="_blank">RC Chile</a>
+        <a href="https://www.rcdr.cl/" target="_blank">RCDR</a>
+        <a href="https://www.ce3ser.cl/" target="_blank">SER</a>
+        <a href="Historia.html">Historia</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="tecno.html">Tecno</a>
+        <a href="taller.html">Taller</a>
+    </nav>
+
+<div class="container">
+    <section id="info">
+        <h2>Radioaficionados de Nueva Imperial</h2>
+        <div class="grid">
+            <div class="card">
+                <h2>Indicativo: CD6YGQ</h2>
+                <h2>QRA: Yefferson Yevenes Millar</h2>
+                <p>Licencia al día, vence: 03 de Octubre de 2029</p>
+            </div>
+        </div>
+            <div class="card">
+                <h2>Indicativo: CD6THR</h2>
+                <h2>QRA: Augusto Teobaldo Rapiman Cayumil</h2>
+                <p>Licencia al día, vence: 27 de Octubre de 2030</p>
+            </div>
+            <div class="card">
+                <h2>Indicativo: CD6PSB</h2>
+                <h2>QRA: Luis Zenon Poblete Silva</h2>
+                <p>Licencia al día, vence: 25 de Octubre de 2027</p>
+            </div>
+            <div class="card">
+                <h2>Indicativo: CD6BTT</h2>
+                <h2>QRA: Iván Alejandro Molina Barrales</h2>
+                <p>Licencia al día, vence: 29 de Julio de 2030</p>
+            </div>
+            <div class="card">
+                <h2>Indicativo: CD6MUK</h2>
+                <h2>QRA: Carlos Eduardo Manosalva Uribe</h2>
+                <p>Licencia al día, vence: 20 de Septiembre de 2028</p>
+            </div>
+            <div class="card">
+                <h2>Indicativo: CD6ZCH</h2>
+                <h2>QRA: Natanael Sadoc Zapata Chavez</h2>
+                <p>Licencia al día, vence: 20 de Septiembre de 2028</p>
+            </div>
+            <div class="card">
+                <h2>Indicativo: CD6FHQ</h2>
+                <h2>QRA: Oscar Gabriiel Fuentealba Oliva</h2>
+                <p><strong> Licencia VENCIDA el 18 de Mayo de 2026</strong></p>
+            </div>
+            <div class="card">
+                <h2>Indicativo: CD6TJU</h2>
+                <h2>QRA: Germán Andrés Frei Arriagada</h2>
+                <p>Licencia al día, vence: 21 de Enero de 2031</p>
+            </div>
+            <div class="card">
+                <h2>Indicativo: CD6GCT</h2>
+                <h2>QRA: Abel Espinoza Cañete</h2>
+                <p>Licencia al día, vence: 26 de Septiembre de 2030</p>
+            </div>
+            <div class="card">
+                <h2>Indicativo: CE6DAM</h2>
+                <h2>QRA: Daniel David Muñoz Zuñiga</h2>
+                <p>Licencia al día, vence: 08 de Enero de 2029</p>
+            </div>
+            <div class="card">
+                <h2>Indicativo: CA6DHJ</h2>
+                <h2>QRA: David Alejandro Hernández Jiménez</h2>
+                <p>Licencia al día, vence: 17 de Noviembre de 2027</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="container">
+        
+<section id="info">
+<h2>Condición de Propagación</h2>
+<div class="grid">
+<div class="card">                    
+<center><a href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!"><img src="https://www.hamqsl.com/solar101vhf.php"></a></center>
+</div>
+</div>
+
+<div class="grid">
+<div class="card">
+<center><a href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!"><img src="https://www.hamqsl.com/solar101vhfper.php"></a></center>
+</div>
+</div>
+<div class="grid">
+<div class="card">
+<center><a href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!"><img src="https://www.hamqsl.com/solar101vhfpic.php"></a></center>
+</div>
+</div>
+<div class="grid">
+<div class="card">
+<center><a href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!"><img src="https://www.hamqsl.com/solar101sc.php"></a></center>    
+</div>
+</div>
+</section>
+        <section>
+            <h2>Servicios de Emergencia</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Seguridad Pública</h3>
+                    <ul>
+                        <li>SAMU - 131</li>
+                        <li>Bomberos de Chile - 132</li>
+                        <li>Carabineros - 133</li>
+                        <li>PDI - 134</li>                        
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Gubernamental</h3>
+                    <ul>
+                        <li><a href="https://senapred.cl/">SENAPRED</a></li>
+                        <li><a href="https://www.sernageomin.cl/rnvv/">Vigilancia Volcánica</a></li>
+                        <li><a href="https://www.snamchile.cl/">SNAM</a></li>
+                        <li><a href="https://www.shoa.cl/php/inicio.php">SHOA</a></li>                        
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Redes de Enlace - Internet</h3>
+                    <ul>
+                        <li><a href="https://echolinkchile.cl/">Echolink Chile</a></li>
+                        <li><a href="https://zello.com/es/">Zello</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.loudtalks&hl=es">Zello APP</a></li>
+                        <li><a href="https://register.peanut.network/">Peanut Ham Radio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>&copy; Desarrollado por <strong>Código 404 Ciberseguridad</strong> - 2026</p>
+    </footer>
+
+</body>
+</html>
